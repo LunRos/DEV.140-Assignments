@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Color Palette: Original Linux Tux Theme */
+:root {
+  --bg-color: #121212;
+  /* Tux Black (Main Background) */
+  --surface-color: #1e1e1e;
+  /* Darker Surface for Cards */
+  --primary-color: #ffcc00;
+  /* Tux Yellow/Orange (Accent/Borders) */
+  --secondary-accent: #f8f9fa;
+  /* Tux White (Text/Highlights) */
+  --text-color: #e0e0e0;
+  /* Off-white for general reading */
+  --border-color: #333333;
+  /* Dark grey for subtle outlines */
+}
+
+/* 1. Type Selector */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Slab', serif;
+  color: var(--secondary-accent);
+  font-weight: 700;
+  margin-top: 0;
+}
+
+/* Header Styling */
+header {
+  background-color: #000000;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 4px solid var(--primary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  margin-bottom: 40px;
+}
+
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.header-logo {
+  height: 55px;
+  width: auto;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: var(--secondary-accent);
+}
+
+header p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+/* Layout basics */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 2. Class Selector with Box Model */
+.content-card {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  /* Box Model: Border */
+  padding: 30px;
+  /* Box Model: Padding */
+  margin: 30px 0;
+  /* Box Model: Margin */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* 3. ID Selector */
+#about,
+#getting-started {
+  background-color: var(--surface-color);
+  padding: 30px;
+  /* Box Model: Padding */
+  margin: 40px auto;
+  /* Box Model: Margin */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Table of Contents specific styling */
+#toc {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+#toc h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#toc nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#toc a {
+  display: inline-block;
+  background-color: rgba(255, 204, 0, 0.1);
+  color: var(--secondary-accent);
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgba(255, 204, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+#toc a:hover {
+  background-color: var(--primary-color);
+  color: #000000;
+  border-color: var(--primary-color);
+}
+
+/* Global Link Styling */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--secondary-accent);
+  text-decoration: underline;
+}
+
+/* Ordered List Styling */
+ol {
+  padding-left: 20px;
+}
+
+ol li {
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+  background-color: #000000;
+  color: var(--text-color);
+  border-top: 1px solid var(--border-color);
+}
+
+/* --- Layout Redesign: Flexbox & Grid --- */
+
+/* Base (Mobile - 320px+) */
+.articles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.articles-container .content-card {
+  margin: 0; /* Let flex/grid gap handle the spacing */
+  height: 100%; /* Ensure cards stretch nicely in grid */
+  box-sizing: border-box;
+}
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+  .articles-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* Desktop (1200px+) */
+@media (min-width: 1200px) {
+  main {
+    max-width: 1100px;
+  }
+
+  .articles-container {
+    gap: 40px;
+  }
+}

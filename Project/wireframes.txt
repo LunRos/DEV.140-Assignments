@@ -93,3 +93,19 @@
 ------------------------------------------------------------------------
 [ FOOTER ]
 ========================================================================
+
+Color Palette
+Primary / Background: Off-Black / Charcoal (#121212)
+
+Secondary / Surface: Soft Dark Slate (#1E1E24)
+
+Primary Accent: Vivid Pink (#FF2E93)
+
+Secondary Accent / Highlight: Soft Pastels / Rose Pink (#FF85A1)
+
+Text: Off-White / Pale Pink (#F8F9FA)
+
+Font Choices
+Headings: Inter or Roboto (bold, modern sans-serif)
+
+Body Text: System sans-serif stack (clean, accessible, easy to read)

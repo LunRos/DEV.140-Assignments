@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Roboto:wght@700&display=swap');
+
+/* Color Palette based on Wireframe Requirements */
+:root {
+  --bg-color: #121212; /* Off-Black / Charcoal */
+  --surface-color: #1E1E24; /* Soft Dark Slate */
+  --primary-accent: #FF2E93; /* Vivid Pink */
+  --secondary-accent: #FF85A1; /* Soft Pastels / Rose Pink */
+  --text-color: #F8F9FA; /* Off-White / Pale Pink */
+}
+
+/* 1. Type Selector */
+body {
+  /* Body Text: System sans-serif stack (clean, accessible, easy to read) */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+/* 2. Type Selector with Box Model */
+header {
+  background-color: var(--surface-color);
+  padding: 20px 40px;          /* Box Model: Padding */
+  margin-bottom: 30px;         /* Box Model: Margin */
+  border-bottom: 5px solid var(--primary-accent); /* Box Model: Border */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1, header p {
+  margin: 0;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Anchor styling */
+a {
+  color: var(--secondary-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--primary-accent);
+}
+
+header a {
+  font-weight: bold;
+}
+
+/* 3. Class Selector with Box Model */
+.project-card {
+  background-color: var(--surface-color);
+  border: 1px solid #333333;   /* Box Model: Border */
+  border-left: 5px solid var(--primary-accent); /* Box Model: Border */
+  padding: 20px;               /* Box Model: Padding */
+  margin: 15px 0;              /* Box Model: Margin */
+  border-radius: 5px;
+}
+
+/* 4. ID Selector */
+#hero, #about-me {
+  background-color: var(--surface-color);
+  padding: 30px;               /* Box Model: Padding */
+  margin: 20px 40px;           /* Box Model: Margin */
+  border: 2px dashed var(--secondary-accent); /* Box Model: Border */
+  border-radius: 10px;
+}
+
+/* Additional styling for layout */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Feature Areas Grid/Flexbox Layout */
+.featured-cards {
+  display: block;
+}
+
+.featured-cards .project-card {
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: var(--surface-color);
+  border-top: 5px solid var(--primary-accent);
+}
