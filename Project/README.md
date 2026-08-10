@@ -1,4 +1,4 @@
-# Milestone 2 Project Requirements
+# Project Milestone 3 Requirements
 
 ## 1. Accessibility Fixes (WAVE)
 - **Empty Link Fix:** Checked for the empty link flagged by WAVE and verified that all anchor tags contain descriptive text instead of remaining empty.
