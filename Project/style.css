@@ -2,11 +2,16 @@
 
 /* Color Palette based on Wireframe Requirements */
 :root {
-  --bg-color: #121212; /* Off-Black / Charcoal */
-  --surface-color: #1E1E24; /* Soft Dark Slate */
-  --primary-accent: #FF2E93; /* Vivid Pink */
-  --secondary-accent: #FF85A1; /* Soft Pastels / Rose Pink */
-  --text-color: #F8F9FA; /* Off-White / Pale Pink */
+  --bg-color: #121212;
+  /* Off-Black / Charcoal */
+  --surface-color: #1E1E24;
+  /* Soft Dark Slate */
+  --primary-accent: #FF2E93;
+  /* Vivid Pink */
+  --secondary-accent: #FF85A1;
+  /* Soft Pastels / Rose Pink */
+  --text-color: #F8F9FA;
+  /* Off-White / Pale Pink */
 }
 
 /* 1. Type Selector */
@@ -21,7 +26,12 @@ body {
 }
 
 /* Headings Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Inter', 'Roboto', sans-serif;
   font-weight: 700;
   color: var(--text-color);
@@ -30,24 +40,31 @@ h1, h2, h3, h4, h5, h6 {
 /* 2. Type Selector with Box Model */
 header {
   background-color: var(--surface-color);
-  padding: 24px;               /* Box Model: Padding (8px multiple) */
-  margin-bottom: 32px;         /* Box Model: Margin (8px multiple) */
-  border-bottom: 5px solid var(--primary-accent); /* Box Model: Border */
+  padding: 24px;
+  /* Box Model: Padding (8px multiple) */
+  margin-bottom: 32px;
+  /* Box Model: Margin (8px multiple) */
+  border-bottom: 5px solid var(--primary-accent);
+  /* Box Model: Border */
   display: flex;
-  flex-direction: column;      /* Mobile base: column layout */
-  gap: 16px;                   /* 8px multiple */
+  flex-direction: column;
+  /* Mobile base: column layout */
+  gap: 16px;
+  /* 8px multiple */
   align-items: center;
   text-align: center;
 }
 
-header h1, header p {
+header h1,
+header p {
   margin: 0;
 }
 
 header ul {
   list-style: none;
   display: flex;
-  gap: 24px;                   /* 8px multiple */
+  gap: 24px;
+  /* 8px multiple */
   margin: 0;
   padding: 0;
 }
@@ -70,8 +87,10 @@ header a {
 /* 3. Class Selector with Box Model */
 .project-card {
   background-color: var(--surface-color);
-  border: 1px solid #333333;   /* Box Model: Border */
-  padding: 24px;               /* Box Model: Padding (8px multiple) */
+  border: 1px solid #333333;
+  /* Box Model: Border */
+  padding: 24px;
+  /* Box Model: Padding (8px multiple) */
   border-radius: 8px;
   /* Removed fixed margin to let layout handles spacing via gap */
   box-sizing: border-box;
@@ -79,10 +98,13 @@ header a {
 }
 
 /* 4. ID Selector */
-#hero, #about-me {
+#hero,
+#about-me {
   background-color: var(--surface-color);
-  padding: 32px;               /* Box Model: Padding (8px multiple) */
-  margin: 24px 0;              /* Box Model: Margin (8px multiple) */
+  padding: 32px;
+  /* Box Model: Padding (8px multiple) */
+  margin: 24px 0;
+  /* Box Model: Margin (8px multiple) */
   border-radius: 8px;
 }
 
@@ -90,25 +112,147 @@ header a {
 main {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 16px;             /* 8px multiple */
+  padding: 0 16px;
+  /* 8px multiple */
 }
 
 /* Feature Areas Grid/Flexbox Layout */
 /* Base (Mobile - 320px+) */
-.featured-cards, 
+.featured-cards,
 #project-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;                   /* 8px multiple */
-  margin-bottom: 32px;         /* 8px multiple */
+  gap: 16px;
+  /* 8px multiple */
+  margin-bottom: 32px;
+  /* 8px multiple */
 }
 
 footer {
   text-align: center;
-  padding: 24px;               /* 8px multiple */
-  margin-top: 48px;            /* 8px multiple */
+  padding: 24px;
+  /* 8px multiple */
+  margin-top: 48px;
+  /* 8px multiple */
   background-color: var(--surface-color);
   border-top: 5px solid var(--primary-accent);
+}
+
+/* --- Form Styles & Gestalt Principles --- */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Gestalt: Proximity - Grouping the form elements close together */
+.contact-form fieldset {
+  border: 1px solid #333333;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: var(--surface-color);
+}
+
+.contact-form legend {
+  font-weight: bold;
+  color: var(--text-color);
+  padding: 0 8px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  /* Proximity: label is very close to its input */
+  margin-bottom: 24px;
+  /* Proximity: separation between different form groups */
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.form-group .required {
+  color: var(--primary-accent);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background-color: #121212;
+  color: var(--text-color);
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-accent);
+  /* Similarity: interactive elements get accent color */
+}
+
+/* Accessible Error State */
+.form-group input[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+  border-color: #ff4d4f;
+  /* Red border for errors */
+}
+
+/* Gestalt: Similarity - Buttons styled similarly to links (using primary-accent) */
+.submit-btn {
+  background-color: var(--primary-accent);
+  color: var(--text-color);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #d12275;
+}
+
+/* Contact Links Styling */
+.contact-links {
+  background-color: var(--surface-color);
+  border: 1px solid #333333;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* Box-sizing for consistent width */
+  box-sizing: border-box;
+}
+
+.contact-links h3 {
+  margin: 0;
+  color: var(--primary-accent);
+}
+
+.contact-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-links li {
+  font-size: 1.05rem;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #333333;
+}
+
+.contact-links li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 /* --- Media Queries for Responsiveness --- */
@@ -118,14 +262,29 @@ footer {
   header {
     flex-direction: row;
     justify-content: space-between;
-    padding: 24px 48px;        /* 8px multiple */
+    padding: 24px 48px;
+    /* 8px multiple */
     text-align: left;
   }
-  
+
   .featured-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 24px;                 /* 8px multiple */
+    gap: 24px;
+    /* 8px multiple */
+  }
+
+  .contact-container {
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  .contact-form {
+    flex: 2;
+  }
+
+  .contact-links {
+    flex: 1;
   }
 }
 
@@ -134,8 +293,9 @@ footer {
   main {
     max-width: 1100px;
   }
-  
+
   .featured-cards {
-    gap: 32px;                 /* 8px multiple */
+    gap: 32px;
+    /* 8px multiple */
   }
 }

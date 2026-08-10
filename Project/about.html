@@ -46,15 +46,43 @@
       <h2>Get In Touch</h2>
       <p>Feel free to reach out via email, phone, or connect on my personal platforms.</p>
 
-      <ul>
-        <li>Email: <a href="mailto:luna.rose@lunros.me">luna.rose@lunros.me</a></li>
-        <li>Phone: (480) 256-9907</li>
-        <li>Website: <a href="https://lunros.me" target="_blank" rel="noopener noreferrer">lunros.me</a></li>
-        <li>GitHub: <a href="https://github.com/LunRos" target="_blank" rel="noopener noreferrer">github.com/LunRos</a>
-        </li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/lunros" target="_blank"
-            rel="noopener noreferrer">linkedin.com/in/lunros</a></li>
-      </ul>
+      <div class="contact-container">
+        <div class="contact-links">
+          <h3>Direct Contact Info</h3>
+          <ul>
+            <li><strong>Email:</strong> <a href="mailto:luna.rose@lunros.me">luna.rose@lunros.me</a></li>
+            <li><strong>Phone:</strong> (480) 256-9907</li>
+            <li><strong>Website:</strong> <a href="https://lunros.me" target="_blank" rel="noopener noreferrer">lunros.me</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/LunRos" target="_blank" rel="noopener noreferrer">github.com/LunRos</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/lunros" target="_blank" rel="noopener noreferrer">linkedin.com/in/lunros</a></li>
+          </ul>
+        </div>
+
+        <!-- Using FormSubmit.co to handle the form without needing a backend server -->
+        <form action="https://formsubmit.co/luna.rose@lunros.me" method="POST" class="contact-form">
+          <fieldset>
+            <legend>Send a Message</legend>
+            
+            <div class="form-group">
+              <label for="name">Full Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" required aria-required="true">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <!-- aria-invalid is used for accessible error state demonstration -->
+              <input type="email" id="email" name="email" required aria-required="true" aria-invalid="false">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+          </fieldset>
+        </form>
+      </div>
     </section>
   </main>
 
