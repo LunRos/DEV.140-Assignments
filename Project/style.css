@@ -150,17 +150,8 @@ footer {
   /* 8px multiple */
   margin-top: 48px;
   /* 8px multiple */
-  background-color: #ffffff;
+  background-color: var(--surface-color);
   border-top: 5px solid var(--primary-accent);
-}
-
-footer p {
-  color: #333333;
-}
-
-footer a {
-  color: #333333;
-  text-decoration: underline;
 }
 
 /* --- Form Styles & Gestalt Principles --- */
