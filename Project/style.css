@@ -155,11 +155,12 @@ footer {
 }
 
 footer p {
-  color: #cccccc;
+  color: #333333;
 }
 
 footer a {
-  color: #cccccc;
+  color: #333333;
+  text-decoration: underline;
 }
 
 /* --- Form Styles & Gestalt Principles --- */
