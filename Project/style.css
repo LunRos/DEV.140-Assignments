@@ -60,6 +60,22 @@ header p {
   margin: 0;
 }
 
+.title-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.title-group .portrait {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-accent);
+}
+
 header ul {
   list-style: none;
   display: flex;
@@ -134,8 +150,16 @@ footer {
   /* 8px multiple */
   margin-top: 48px;
   /* 8px multiple */
-  background-color: var(--surface-color);
+  background-color: #ffffff;
   border-top: 5px solid var(--primary-accent);
+}
+
+footer p {
+  color: #cccccc;
+}
+
+footer a {
+  color: #cccccc;
 }
 
 /* --- Form Styles & Gestalt Principles --- */
@@ -265,6 +289,10 @@ footer {
     padding: 24px 48px;
     /* 8px multiple */
     text-align: left;
+  }
+
+  .title-group {
+    justify-content: flex-start;
   }
 
   .featured-cards {
